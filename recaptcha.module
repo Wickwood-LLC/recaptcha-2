@@ -155,7 +155,7 @@ function recaptcha_captcha() {
             // Create the destination container, inserting any custom theme HTML
             // necessary ($recaptcha_custom_html will be empty if we are not
             // using custom theme).
-            '#markup' => '<div id="recaptcha_ajax_api_container">' . $recaptcha_custom_html . '</div>',
+            '#markup' => '<div class="g-recaptcha" data-sitekey="' . $recaptcha_public_key . '">' . $recaptcha_custom_html . '</div>',
           );
           drupal_add_js('https://www.google.com/recaptcha/api.js', array('type' => 'external'));
           $recaptcha_options['public_key'] = $recaptcha_public_key;
