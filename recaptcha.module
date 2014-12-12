@@ -161,7 +161,7 @@ function recaptcha_captcha() {
           $recaptcha_options['public_key'] = $recaptcha_public_key;
           $recaptcha_options['container'] = 'recaptcha_ajax_api_container';
           drupal_add_js(array('recaptcha' => $recaptcha_options), 'setting');
-          drupal_add_js(drupal_get_path('module', 'recaptcha') . '/recaptcha.js');
+          // drupal_add_js(drupal_get_path('module', 'recaptcha') . '/recaptcha.js');
         }
       }
       return $captcha;
